@@ -4,27 +4,20 @@ angular.module('callTimeApp', ['ui.router'])
 
 //******Router Setup*******
     function Config($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/');
+        // $urlRouterProvider.otherwise('/Login');
         $stateProvider
         
         //add .states for each html page
-            .state('login', {
-                url: '/login',
-                templateUrl: '/Login/login.html'
+            .state('Login', {
+                url: '/Login',
+                templateUrl: './Login/login.html'
                 // controller: 'loginController as logCtrl'
                 // authenticate: false
             })
-            
-            .state('Landing', {
-                url: '/',
-                templateUrl: '/Landing/filmlanding.html'
-                // controller: '',
-                // authenticate: true
-            })
 
-            .state('Cover', {
-                url: '/cover',
-                templateUrl: '/Cover/cover.html'
+            .state('Landing', {
+                url: '/Landing',
+                templateUrl: './Landing/filmlanding.html'
                 // controller: '',
                 // authenticate: true
             })
@@ -34,4 +27,5 @@ angular.module('callTimeApp', ['ui.router'])
                 // controller: 'searchController as searchCtrl',
                 // authenticate: true
             });
+            $urlRouterProvider.otherwise('/Login');
     }
