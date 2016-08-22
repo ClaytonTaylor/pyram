@@ -21,11 +21,17 @@ angular.module('callTimeApp', ['ui.router'])
                 // controller: '',
                 // authenticate: true
             })
+            .state('MusicLanding', {
+                url: '/MusicLanding',
+                templateUrl: './Music/musiclanding.html'
+                // controller: '',
+                // authenticate: true
+            })
             .state('Search', {
                 url: '/Search',
                 templateUrl: '/Search/filmsearch.html'
                 // controller: 'searchController as searchCtrl',
                 // authenticate: true
             });
-            $urlRouterProvider.otherwise('/Login');
+            $urlRouterProvider.otherwise('/Landing');
     }
